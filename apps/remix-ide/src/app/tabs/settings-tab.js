@@ -108,8 +108,9 @@ module.exports = class SettingsTab extends ViewPlugin {
     this._view.useMatomoAnalytics = yo`<input onchange=${onchangeMatomoAnalytics} id="settingsMatomoAnalytics" type="checkbox" class="custom-control-input">`
     this._view.useMatomoAnalyticsLabel = yo`
       <label class="form-check-label custom-control-label align-middle" for="settingsMatomoAnalytics">
-        <span>Enable Matomo Analytics. The statistyics we are collecting is helping to improve plugins usage. We choose Matomo Analytics service which is </span>
-        <a target="_blank" href="https://matomo.org/free-software">open source</a>
+        <span>Enable Matomo Analytics. The data we are collecting is mainly helping us to improve plugins usage and is not used for any other purpose than analytics. We choose </span>
+        <a target="_blank" href="https://matomo.org/feature-overview">Matomo Analytics</a>
+        <span> service which is open source.</span>
       </label>
     `
     if (!this.config.get('settings/matomo-analytics')) this.config.set('settings/generate-contract-metadata', false)
