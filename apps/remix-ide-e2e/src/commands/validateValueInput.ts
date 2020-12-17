@@ -13,6 +13,7 @@ class ValidateValueInput extends EventEmitter {
       }, [selector], function (result) {
         browser.assert.equal(result.value, expectedValue)
         done()
+        this.emit('complete')
       })
     })
     return this
